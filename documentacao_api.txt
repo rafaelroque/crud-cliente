@@ -9,4 +9,5 @@ Criar: http://localhost:8080/api/v1/clientes/novo
 
 Trazer todos: http://localhost:8080/api/v1/clientes/todos
 Buscar por id: http://localhost:8080/api/v1/clientes/1
+Buscar por nome: http://localhost:8080/api/v1/clientes/buscarPorNome?nome=Raf
 
