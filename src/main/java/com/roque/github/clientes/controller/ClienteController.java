@@ -1,5 +1,7 @@
 package com.roque.github.clientes.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,9 +21,9 @@ public class ClienteController {
 	@Autowired
 	private ClienteService service;
 	
-	@GetMapping
-	public String ok () {
-		return "ok";
+	@GetMapping("/todos")
+	public ResponseEntity<List<Cliente>> todos () {
+		return new ResponseEntity<>(service.buscarTodos(),HttpStatus.OK);
 	}
 	
 	@PostMapping("/novo")
